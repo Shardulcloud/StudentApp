@@ -1,0 +1,33 @@
+<%@ page pageEncoding="UTF-8" %>
+<% String ctx = request.getContextPath(); %>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= pageTitle %> | EduTrack</title>
+<link rel="stylesheet" href="<%= ctx %>/assets/style.css">
+<script src="<%= ctx %>/assets/app.js"></script>
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="logo">E</div><div><b>EduTrack</b><small>Student Management</small></div></div>
+  <nav class="nav">
+    <div class="nav-label">Main</div>
+    <a class="<%= "home".equals(active) ? "active" : "" %>" href="<%= ctx %>/index.jsp"><i></i>Dashboard</a>
+    <a class="<%= "students".equals(active) ? "active" : "" %>" href="<%= ctx %>/students"><i></i>Students</a>
+    <a class="<%= "register".equals(active) ? "active" : "" %>" href="<%= ctx %>/register.jsp"><i></i>Register Student</a>
+    <div class="nav-label">Services</div>
+    <a class="<%= "enquiry".equals(active) ? "active" : "" %>" href="<%= ctx %>/enquiry.jsp"><i></i>Search &amp; Enquiry</a>
+    <a class="<%= "api".equals(active) ? "active" : "" %>" href="<%= ctx %>/api-console.jsp"><i></i>Directory API</a>
+    <a class="<%= "session".equals(active) ? "active" : "" %>" href="<%= ctx %>/SessionServlet"><i></i>My Session</a>
+  </nav>
+  <div class="side-foot"><span class="dot"></span>Server online &middot; Local</div>
+</aside>
+<div class="main">
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  <h1><%= pageTitle %></h1>
+  <span id="clock"></span>
+  <button class="chip" id="themeBtn">Dark mode</button>
+  <div class="user"><span class="avatar">AD</span><span class="nm">Administrator</span></div>
+</header>
+<main class="content">

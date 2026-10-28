@@ -1,0 +1,4 @@
+</main>
+<footer class="site"><span>&copy; <%= java.time.Year.now().getValue() %> EduTrack Student Management System</span><span>Powered by Servlets, JSP &amp; REST</span></footer>
+</div>
+</body></html>
